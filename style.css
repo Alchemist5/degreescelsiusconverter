@@ -1,0 +1,165 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background: #749ade;
+    font-family: sans-serif, Verdana, Geneva, Tahoma;
+}
+
+.main-header {
+    font-size: 15px;
+}
+
+.main-header span {
+    color: aquamarine;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-navbar ul li {
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.main-navbar ul li:hover {
+    cursor: pointer;
+    background: #749ade;
+    transition: background 1s;
+}
+
+.main-navbar ul li:hover a {
+    color: #fff;
+}
+
+.main-navbar ul li:nth-child(3) ul {
+    display: none;
+}
+
+.main-navbar ul li:nth-child(3) {
+    position: relative;
+}
+
+.main-navbar ul li:nth-child(3):hover ul {
+    display: block;
+    position: absolute;
+    left: 0%;
+    width: 100px;
+    background: #f4f4f4;
+}
+
+.main-navbar ul li:nth-child(3):hover ul li a {
+    color: blue;
+}
+
+.container-1 {
+    display: flex;
+    justify-content: space-between;
+    background: #f4f4f4;
+    padding: 20px 10px;
+    animation: slideFromLeft 1s ease-in-out;
+}
+
+/* showcase */
+.showcase {
+    animation: slideFromBottom 1.3s ease-in-out;
+}
+
+.container-2 {
+    background: #f4f4f4;
+    margin: 30px 100px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px #101819;
+    animation: slideFromBottom 1s ease-in-out;
+}
+
+.title h3 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.my-form {
+    padding: 30px 130px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    outline: none;
+    border-radius: 7px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+input[type="number"] {
+    width: 100%;
+}
+
+input[type="submit"] {
+    width: 100%;
+    text-transform: uppercase;
+    background: #749ade;
+    box-shadow: 2px 3px 5px #3c6065;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background: #749ade;
+    color: #fff;
+    transform: scale(0.97);
+}
+    
+#loading {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.fehrenheit, #loading {
+    display: none;
+}
+
+.alert {
+    background: red;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+}
+
+.card-darken {
+    transition: 1s;
+    filter: brightness(30%);
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
